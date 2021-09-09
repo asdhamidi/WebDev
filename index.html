@@ -2,6 +2,11 @@
 <html>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap');
+        p {
+            font-size: 25px;
+            font-weight: 400;
+        }
+
         body{
             margin: 0px;
             font-family: "Poppins";
@@ -9,6 +14,7 @@
         
         .container {
             width: auto;
+            display: block;
             margin: 0px 100px 0px 100px;
             padding-right: 20px;
             padding-left: 20px;
@@ -19,7 +25,7 @@
             position: fixed;
             top: 0px;
             text-align: right;
-            backdrop-filter: blur(3px);
+            backdrop-filter: blur(8px);
         }   
         .nav-bar h1, .dropdown {
             font-weight: 400;
@@ -29,12 +35,19 @@
             color: #000;
         }
         
+        .nav-bar #title {
+            position: relative;
+            float: left;
+        }
+        
         .nav-bar h1:hover, .dropdown:hover #drpbtn {
             position: relative;
             left: 1px;
             bottom: 1px;
             color: #04AA6D;
+            text-shadow: -3px 5px 5px rgba(128,128,128, 0.5);
         }
+
         .dropdown-content {
             border: 1px groove grey;
             border-radius: 50px;
@@ -60,44 +73,56 @@
             transform: scale(1.1);
         }
         
-        .landing {
-            display: flex;
-            flex-direction: column;
-            margin: auto;
-            height: auto;
+        .landing, .footer {
+            margin: 15%;
         }
         
-        .landing-text {
+        .landing-text, .footer-text {
             font-size: 40px;
-            margin: 20px auto 100px auto;
-        }
-        
-        .landing-icon {
-            display: flex;
-            justify-content: center;
-            margin: 200px auto 10px  auto;
+            margin: 0px;
+            text-align: center;
         }
 
-        .landing-icon img{
-            width: 100px;
-        }
-        .about {
+        .sections {
             display: flex;
             flex-direction: row;
-            padding: 50px;
+            padding: 70px;
             margin: auto;
+        }
+
+        .subsections {
+            margin: auto 30px auto 30px;
+            padding: 30px;
             width: auto;
+
         }
         .headings {
             font-size: 50px;
-            text-shadow: 15px 15px rgba(128,128,128, 0.3);
+            text-shadow: -15px 15px rgba(128,128,128, 0.3);
             font-weight: 600;
         }
 
-        .about-me {
-            font-weight: 800;
-            width: 700px;
+        button {
+            font-size: 30px;
+            background: white;
+            border: 2px solid #04AA6D;
+            border-radius: 5px;
+            width: auto;
+            text-align: center;
         }
+        button:hover {
+            position: relative;
+            left: 3px;
+            bottom: 3px;
+            box-shadow: -5px 5px rgba(128,128,128, 0.3);
+            background: #04AA6D;
+            }
+            
+        button:active {
+            transform: translate3d(-2px, 2px, 2px);
+            box-shadow: none
+        }
+        
     </style>
     <head>
         <title>Portfolio - Asadullah Hamidi</title>
@@ -105,16 +130,19 @@
     <body>
         <header>
             <nav class="nav-bar" id="nav-bar">
+                <a href="#Landing"><h1 id="title">Asadullah Hamidi</h1></a>
                 <a href="#About"><h1>About</h1></a>
                 <a href="#Skills"><h1>Skills</h1></a>
+                <a href="#Projects"><h1>Projects</h1></a>
                 <div class="dropdown">
                     <h1 id="drpbtn" style="margin: 0px;">Connect</h1>
                     <div class="dropdown-content">
                         <div class="links">
-                            <a href="https://github.com/asdhamidi"><img src="images/github.png"></a>  
-                            <a href="https://www.linkedin.com/in/asadullahhamidi/"><img src="images/linkedin.png"></a>  
-                            <a href="https://www.instagram.com/asad.codes"><img src="images/instagram.png"></a>
-                            <a href="https://www.asdhamidi.medium.com"><img src="images/medium.png"></a>
+                            <a href="https://github.com/asdhamidi" target="_blank"><img src="images/github.png"></a>  
+                            <a href="https://www.linkedin.com/in/asadullahhamidi/" target="_blank"><img src="images/linkedin.png"></a>  
+                            <a href="https://www.hackerrank.com/asdhamidi" target="_blank"><img src="images/hackerrank.svg"></a>  
+                            <a href="https://www.instagram.com/asad.codes" target="_blank"><img src="images/instagram.png"></a>
+                            <a href="https://www.asdhamidi.medium.com" target="_blank"><img src="images/medium.png"></a>
                         </div>
                     </div>
                 </div>
@@ -122,26 +150,56 @@
             </nav>
         </header>
 
-        <div class="container">
+        <div class="container"  id="Landing">
             <div class="landing">
-                <div class="landing-icon">
-                    <img src="images/landingicon.svg">
-                </div>
                 <div class="landing-text">
+                    <h1 style="font-weight: 600; font-family: monospace;">< Portfolio ></h1>
                     <h1 style="font-weight: 200;">Hi, I'm Asad.</h1>
                 </div>
             </div>
             
-            <div class="about" id="About">
-                <div>
-                    <h1 class="headings">About Me</h1>
-                    <div class="about-me">
-                        <h2 style="font-weight: 400;">I'm a CS undergradute who loves problem solving, creating new things,
-                            & exploring technologies.</h2>
-                            <hr>
-                    </div>
+            <div class="sections" id="About">
+                <div class="subsections">
+                    <h1 class="headings">Bio</h1>
+                    <div>
+                        <p>I'm a CS undergradute from India who loves problem solving, creating new things,
+                            & exploring technologies. I enjoy solving questions of Data Structure and Algorithms. 
+                            As of now, I'm exploring Web Development and really enjoying it.</p>
+                        <form method="get" action="assets/resume.pdf">
+                            <button type="submit">Résumé</button>
+                        </form>
+                </div>
+                </div>
+                <div class="subsections">
+                    <h1 class="headings">Academics</h1>
+                    <h2 style="font-weight: 400;"><b>B. Sc (Honours) Computer Science</b></h2>
+                    <h2 style="font-weight: 200;">Graphic Era (Deemed To Be University</h2>
+                    <h3 style="margin: 0px;">2020-2023</h3>
+                    <h3 style="margin: 0px;">CGPA: 9.54</h3>
+                </div>
+            </div>
+
+            <div class="sections" id="Skills">
+                <div class="subsections">
+                    <h1 class="headings">Skills</h1>
+                    
+                </div>
+            </div>
+
+            <div class="sections" id="Projects">
+                <div class="subsections">
+                    <h1 class="headings">Projects</h1>
+                    <p><u>Coming Soon...</u></p>
+
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="footer-text">
+                    <h1 style="font-weight: 600; font-family: monospace;"> < /Portfolio   > </h1>
                 </div>
             </div>
         </div>
+        <p style="text-align: center; margin: 0px;">Made with ❤️ by Asad.</p>
     </body>
 </html>
