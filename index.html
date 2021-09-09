@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap'); 
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap');
         body{
-            background: linear-gradient(90deg, );
             margin: 0px;
+            font-family: "Poppins";
         }
-
+        
         .container {
             width: auto;
-            margin: 0px auto 0px auto;
+            margin: 0px 100px 0px 100px;
             padding-right: 20px;
             padding-left: 20px;
         }
         
         .nav-bar {
-            background: #282A35;
             width: 100%;
             position: fixed;
             top: 0px;
-            text-align: center;
-        }
+            text-align: right;
+            backdrop-filter: blur(3px);
+        }   
         .nav-bar h1, .dropdown {
+            font-weight: 400;
             display: inline-block;
             margin: 10px;
             font-size: 25px;
-            font-family: "Poppins";
-            color: #FFF;
+            color: #000;
         }
         
         .nav-bar h1:hover, .dropdown:hover #drpbtn {
@@ -44,7 +44,7 @@
             margin-left: 18px;
             width: 70px;
         }
-
+        
         .dropdown:hover .dropdown-content {
             display: block; 
         }
@@ -55,47 +55,56 @@
             width: 40px;
             height: 40px;
         }
-
+        
         .links img:hover {
             transform: scale(1.1);
         }
         
         .landing {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            padding: 50px;
-            margin: 100px auto 100px auto;
+            flex-direction: column;
+            margin: auto;
+            height: auto;
         }
-
+        
         .landing-text {
             font-size: 40px;
-            font-family: "Poppins";
-            margin: 100px 50px 100px auto;
-        }
-
-        .landing-text h1, h2 {
-            margin: 5px auto 5px auto; 
+            margin: 20px auto 100px auto;
         }
         
         .landing-icon {
             display: flex;
             justify-content: center;
-            margin: 100px auto 100px 50px;
+            margin: 200px auto 10px  auto;
         }
 
         .landing-icon img{
             width: 100px;
         }
-        
-        
+        .about {
+            display: flex;
+            flex-direction: row;
+            padding: 50px;
+            margin: auto;
+            width: auto;
+        }
+        .headings {
+            font-size: 50px;
+            text-shadow: 15px 15px rgba(128,128,128, 0.3);
+            font-weight: 600;
+        }
+
+        .about-me {
+            font-weight: 800;
+            width: 700px;
+        }
     </style>
     <head>
         <title>Portfolio - Asadullah Hamidi</title>
     </head>
     <body>
         <header>
-            <nav class="nav-bar">
+            <nav class="nav-bar" id="nav-bar">
                 <a href="#About"><h1>About</h1></a>
                 <a href="#Skills"><h1>Skills</h1></a>
                 <div class="dropdown">
@@ -112,20 +121,26 @@
                 </div>
             </nav>
         </header>
+
         <div class="container">
             <div class="landing">
-                <div class="landing-text">
-                    <h1><strong>I'm Asad!</strong></h1>
-                    <h2 style="font-size: 30px;">I'm a CS undegraduate who loves problem solving</h2>
-                    <h2 style="font-size: 30px;">and building new things.</h2>
-                </div>
                 <div class="landing-icon">
                     <img src="images/landingicon.svg">
                 </div>
+                <div class="landing-text">
+                    <h1 style="font-weight: 200;">Hi, I'm Asad.</h1>
+                </div>
             </div>
+            
             <div class="about" id="About">
-                <h1>About Me</h1>
-                <p></p>
+                <div>
+                    <h1 class="headings">About Me</h1>
+                    <div class="about-me">
+                        <h2 style="font-weight: 400;">I'm a CS undergradute who loves problem solving, creating new things,
+                            & exploring technologies.</h2>
+                            <hr>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
