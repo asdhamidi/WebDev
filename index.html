@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <style>
+        $randomNumber: random(5);
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap');
         p {
             font-size: 25px;
@@ -11,7 +12,6 @@
             margin: 0px;
             font-family: "Poppins";
         }
-        
         .container {
             width: auto;
             display: block;
@@ -19,7 +19,41 @@
             padding-right: 20px;
             padding-left: 20px;
         }
-        
+        .stars {
+            height: 5px;
+            width: 5px;
+            border-radius: 100%;
+            position: relative;
+            background-color: black;
+            animation: moving 5000ms;
+            animation-fill-mode: forwards;
+            animation-timing-function:ease-in;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes moving {
+            
+            0% {
+                opacity: 0;
+            }
+            20% {
+                opacity: 0.5;
+            }
+            40%{
+                opacity: 1;
+            }
+            60% {
+                opacity: 0.5;
+            }
+            80% {
+                opacity: 0.;
+            }
+            100% {
+                transform: translate(500px, 500px);
+                opacity: 0;
+            }
+            
+        }
         .nav-bar {
             width: 100%;
             position: fixed;
@@ -38,8 +72,10 @@
         .nav-bar #title {
             position: relative;
             float: left;
+
         }
         
+        /* Note : Title to change color in horizontal direction */
         .nav-bar h1:hover, .dropdown:hover #drpbtn {
             position: relative;
             left: 1px;
@@ -78,6 +114,7 @@
         }
         
         .landing-text, .footer-text {
+            width: auto;
             font-size: 40px;
             margin: 0px;
             text-align: center;
@@ -91,7 +128,7 @@
         }
 
         .subsections {
-            margin: auto 30px auto 30px;
+            margin: auto;
             padding: 30px;
             width: auto;
 
@@ -128,6 +165,7 @@
         <title>Portfolio - Asadullah Hamidi</title>
     </head>
     <body>
+        <div class="stars"></div>   
         <header>
             <nav class="nav-bar" id="nav-bar">
                 <a href="#Landing"><h1 id="title">Asadullah Hamidi</h1></a>
@@ -146,60 +184,58 @@
                         </div>
                     </div>
                 </div>
-                </div>
-            </nav>
-        </header>
-
-        <div class="container"  id="Landing">
-            <div class="landing">
-                <div class="landing-text">
-                    <h1 style="font-weight: 600; font-family: monospace;">< Portfolio ></h1>
-                    <h1 style="font-weight: 200;">Hi, I'm Asad.</h1>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="landing">
+            <div class="landing-text">
+                <h1 style="font-weight: 600; font-family: monospace;" id="Landing">< Portfolio ></h1>
+                 <h1 style="font-weight: 200;">Hi, I'm Asad.</h1>
                 </div>
             </div>
             
             <div class="sections" id="About">
+                <div class="stars"></div>   
                 <div class="subsections">
                     <h1 class="headings">Bio</h1>
                     <div>
                         <p>I'm a CS undergradute from India who loves problem solving, creating new things,
                             & exploring technologies. I enjoy solving questions of Data Structure and Algorithms. 
                             As of now, I'm exploring Web Development and really enjoying it.</p>
-                        <form method="get" action="assets/resume.pdf">
-                            <button type="submit">Résumé</button>
-                        </form>
-                </div>
-                </div>
-                <div class="subsections">
-                    <h1 class="headings">Academics</h1>
-                    <h2 style="font-weight: 400;"><b>B. Sc (Honours) Computer Science</b></h2>
+                            <form method="get" action="assets/resume.pdf">
+                                <button type="submit">Résumé</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subsections">
+                        <div class="stars"></div>   
+                        <h1 class="headings">Academics</h1>
+                        <h2 style="font-weight: 400;"><b>B. Sc (Honours) Computer Science</b></h2>
                     <h2 style="font-weight: 200;">Graphic Era (Deemed To Be University</h2>
                     <h3 style="margin: 0px;">2020-2023</h3>
                     <h3 style="margin: 0px;">CGPA: 9.54</h3>
                 </div>
             </div>
-
+            
             <div class="sections" id="Skills">
-                <div class="subsections">
-                    <h1 class="headings">Skills</h1>
-                    
-                </div>
+                <div class="stars"></div>   
+                <h1 class="headings">Skills</h1>
+                
             </div>
-
+            
             <div class="sections" id="Projects">
-                <div class="subsections">
-                    <h1 class="headings">Projects</h1>
-                    <p><u>Coming Soon...</u></p>
+                <h1 class="headings">Projects</h1>
 
-                </div>
             </div>
-
-            <div class="footer">
+            
+            <div class="footer" style="margin: 0px;">
                 <div class="footer-text">
-                    <h1 style="font-weight: 600; font-family: monospace;"> < /Portfolio   > </h1>
+                    <h1 style="font-weight: 600; font-family: monospace; margin: 0px;"> < /Portfolio   > </h1>
                 </div>
             </div>
         </div>
-        <p style="text-align: center; margin: 0px;">Made with ❤️ by Asad.</p>
+        <p style="font-size: 15px; text-align: center; margin: 0px;">Made with ❤️.</p>
     </body>
 </html>
