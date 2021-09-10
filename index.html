@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <style>
-        $randomNumber: random(5);
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap');
         p {
             font-size: 25px;
@@ -15,7 +14,7 @@
         .container {
             width: auto;
             display: block;
-            margin: 0px 100px 0px 100px;
+            margin: auto;
             padding-right: 20px;
             padding-left: 20px;
         }
@@ -110,7 +109,8 @@
         }
         
         .landing, .footer {
-            margin: 15%;
+            position: static;
+            margin: 15% 10% 15% 10%;
         }
         
         .landing-text, .footer-text {
@@ -122,15 +122,16 @@
 
         .sections {
             display: flex;
+            justify-content: space-between;
             flex-direction: row;
-            padding: 70px;
+            padding: 30px;
             margin: auto;
         }
 
         .subsections {
-            margin: auto;
+            margin: 10px;
             padding: 30px;
-            width: auto;
+            width: 50%;
 
         }
         .headings {
@@ -138,8 +139,32 @@
             text-shadow: -15px 15px rgba(128,128,128, 0.3);
             font-weight: 600;
         }
+        .icon-box {
+            display:inline-flex;
+            height: 50px;
+            width: 150px;
+            border: 1px groove rgba(128,128,128,0.5);
+            border-radius: 5px;
+            text-align: center;
+            margin: 10px;
+        }
 
-        button {
+        
+        .icon-box p {
+            margin: 4px;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+        }
+        
+        .icon-pic {
+            width: auto;
+            height: auto;
+        }
+
+        button{
             font-size: 30px;
             background: white;
             border: 2px solid #04AA6D;
@@ -147,7 +172,7 @@
             width: auto;
             text-align: center;
         }
-        button:hover {
+        button:hover, .icon-box:hover {
             position: relative;
             left: 3px;
             bottom: 3px;
@@ -164,7 +189,7 @@
     <head>
         <title>Portfolio - Asadullah Hamidi</title>
     </head>
-    <body>
+    <body  id="Landing">
         <div class="stars"></div>   
         <header>
             <nav class="nav-bar" id="nav-bar">
@@ -184,21 +209,19 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
     
     <div class="container">
         <div class="landing">
             <div class="landing-text">
-                <h1 style="font-weight: 600; font-family: monospace;" id="Landing">< Portfolio ></h1>
+                <h1 style="font-weight: 600; font-family: monospace;">< Portfolio ></h1>
                  <h1 style="font-weight: 200;">Hi, I'm Asad.</h1>
-                </div>
             </div>
-            
+        </div>
+        
             <div class="sections" id="About">
-                <div class="stars"></div>   
-                <div class="subsections">
+                <div class="subsections">   
                     <h1 class="headings">Bio</h1>
                     <div>
                         <p>I'm a CS undergradute from India who loves problem solving, creating new things,
@@ -210,24 +233,55 @@
                         </div>
                     </div>
                     <div class="subsections">
-                        <div class="stars"></div>   
                         <h1 class="headings">Academics</h1>
                         <h2 style="font-weight: 400;"><b>B. Sc (Honours) Computer Science</b></h2>
                     <h2 style="font-weight: 200;">Graphic Era (Deemed To Be University</h2>
                     <h3 style="margin: 0px;">2020-2023</h3>
-                    <h3 style="margin: 0px;">CGPA: 9.54</h3>
                 </div>
             </div>
             
             <div class="sections" id="Skills">
-                <div class="stars"></div>   
-                <h1 class="headings">Skills</h1>
-                
+                <div class="subsections" style="width: auto;">
+                    <h1 class="headings">Skills</h1>
+                    <ul>
+                        <li>
+                            <div class="icon-box">
+                                <img class="icon-pic" src="images/c.svg">
+                                <p>C</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box">
+                                <img class="icon-pic" src="images/cpp.svg">
+                                <p>C++</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box">
+                                <img class="icon-pic" src="images/python.png">
+                                <p>Python</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box">
+                                <img class="icon-pic" src="images/html.svg">
+                                <p>HTML</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box">
+                                <img class="icon-pic" src="images/css.svg">
+                                <p>CSS</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
             
             <div class="sections" id="Projects">
-                <h1 class="headings">Projects</h1>
-
+                <div class="subsections">
+                    <h1 class="headings">Projects</h1>
+                </div>
             </div>
             
             <div class="footer" style="margin: 0px;">
