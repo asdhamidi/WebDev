@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html id="top">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap');
         p {
             font-size: 25px;
             font-weight: 400;
@@ -18,40 +18,58 @@
             padding-right: 20px;
             padding-left: 20px;
         }
-        .stars {
-            height: 5px;
-            width: 5px;
-            border-radius: 100%;
-            position: relative;
-            background-color: black;
-            animation: moving 5000ms;
+
+        .blink {
+            animation: blinking 3000ms;
             animation-fill-mode: forwards;
             animation-timing-function:ease-in;
             animation-iteration-count: infinite;
         }
 
-        @keyframes moving {
+        @keyframes blinking {
             
             0% {
                 opacity: 0;
             }
-            20% {
+            25% {
                 opacity: 0.5;
             }
-            40%{
+            50% {
                 opacity: 1;
             }
-            60% {
+            75% {
                 opacity: 0.5;
             }
-            80% {
-                opacity: 0.;
-            }
             100% {
-                transform: translate(500px, 500px);
                 opacity: 0;
+                transform: translateY(50px);
             }
             
+        }
+        
+        #home {
+            position: relative;
+            float: left;
+            width: 40px; height: 40px; 
+            padding: 5px;
+            margin: 5px;
+            border: 1px solid rgba(128,128,128, 0.5);
+            border-radius: 100px;
+            animation: rotation;
+            animation-duration: 3000ms;
+            animation-fill-mode: forwards;
+            animation-timing-function:linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes rotation {
+            100% {
+                transform: rotate(360deg);
+            }
+            
+        }
+        .down:hover, #home:hover, .drpbtn:hover {
+            filter: invert(41%) sepia(94%) saturate(1636%) hue-rotate(129deg) brightness(92%) contrast(97%);
         }
         .nav-bar {
             width: 100%;
@@ -60,7 +78,7 @@
             text-align: right;
             backdrop-filter: blur(8px);
         }   
-        .nav-bar h1, .dropdown {
+        .nav-bar h1 {
             font-weight: 400;
             display: inline-block;
             margin: 10px;
@@ -68,38 +86,23 @@
             color: #000;
         }
         
-        .nav-bar #title {
-            position: relative;
-            float: left;
-
-        }
         
         /* Note : Title to change color in horizontal direction */
-        .nav-bar h1:hover, .dropdown:hover #drpbtn {
+        .nav-bar h1:hover{
             position: relative;
             left: 1px;
             bottom: 1px;
             color: #04AA6D;
-            text-shadow: -3px 5px 5px rgba(128,128,128, 0.5);
+            text-shadow: -1px 3px 5px rgba(128,128,128, 0.5);
         }
 
-        .dropdown-content {
-            border: 1px groove grey;
-            border-radius: 50px;
-            display: none; 
-            position: absolute;
-            backdrop-filter: blur(5px);
-            margin-left: 18px;
-            width: 70px;
-        }
-        
-        .dropdown:hover .dropdown-content {
-            display: block; 
-        }
-        .links a {
-            display: flex;
+        .links {
             margin: auto;
-            padding: 5px;
+        }
+        .links a{
+            display: flex;
+            margin: 15px; 
+            padding: 0px;
             width: 40px;
             height: 40px;
         }
@@ -123,6 +126,7 @@
         .sections {
             display: flex;
             justify-content: space-between;
+            flex-wrap:inherit;
             flex-direction: row;
             padding: 30px;
             margin: auto;
@@ -136,8 +140,12 @@
         }
         .headings {
             font-size: 50px;
-            text-shadow: -15px 15px rgba(128,128,128, 0.3);
+            text-shadow: -15px 15px rgba(128,128,128, 0.2);
             font-weight: 600;
+        }
+
+        .subsections:hover .headings{
+            text-shadow: -15px 15px rgba(4, 170, 109, 0.2);
         }
         .icon-box {
             display:inline-flex;
@@ -151,6 +159,7 @@
 
         
         .icon-box p {
+            font-weight: 300;
             margin: 4px;
         }
 
@@ -189,26 +198,13 @@
     <head>
         <title>Portfolio - Asadullah Hamidi</title>
     </head>
-    <body  id="Landing">
-        <div class="stars"></div>   
+    <body>
         <header>
             <nav class="nav-bar" id="nav-bar">
-                <a href="#Landing"><h1 id="title">Asadullah Hamidi</h1></a>
+                <a href="#top"><img class="icon-pic" id="home" src="images/home.svg"></a>
                 <a href="#About"><h1>About</h1></a>
                 <a href="#Skills"><h1>Skills</h1></a>
                 <a href="#Projects"><h1>Projects</h1></a>
-                <div class="dropdown">
-                    <h1 id="drpbtn" style="margin: 0px;">Connect</h1>
-                    <div class="dropdown-content">
-                        <div class="links">
-                            <a href="https://github.com/asdhamidi" target="_blank"><img src="images/github.png"></a>  
-                            <a href="https://www.linkedin.com/in/asadullahhamidi/" target="_blank"><img src="images/linkedin.png"></a>  
-                            <a href="https://www.hackerrank.com/asdhamidi" target="_blank"><img src="images/hackerrank.svg"></a>  
-                            <a href="https://www.instagram.com/asad.codes" target="_blank"><img src="images/instagram.png"></a>
-                            <a href="https://www.asdhamidi.medium.com" target="_blank"><img src="images/medium.png"></a>
-                        </div>
-                    </div>
-                </div>
             </nav>
         </header>
     
@@ -217,6 +213,7 @@
             <div class="landing-text">
                 <h1 style="font-weight: 600; font-family: monospace;">< Portfolio ></h1>
                  <h1 style="font-weight: 200;">Hi, I'm Asad.</h1>
+                 <a href="#About"><img class="blink down"src="images/down.svg"></a>
             </div>
         </div>
         
@@ -235,7 +232,7 @@
                     <div class="subsections">
                         <h1 class="headings">Academics</h1>
                         <h2 style="font-weight: 400;"><b>B. Sc (Honours) Computer Science</b></h2>
-                    <h2 style="font-weight: 200;">Graphic Era (Deemed To Be University</h2>
+                    <h2 style="font-weight: 200;">Graphic Era (Deemed To Be University)</h2>
                     <h3 style="margin: 0px;">2020-2023</h3>
                 </div>
             </div>
@@ -243,7 +240,7 @@
             <div class="sections" id="Skills">
                 <div class="subsections" style="width: auto;">
                     <h1 class="headings">Skills</h1>
-                    <ul>
+                    <ul style="display: flex; flex-wrap: wrap;">
                         <li>
                             <div class="icon-box">
                                 <img class="icon-pic" src="images/c.svg">
@@ -274,6 +271,12 @@
                                 <p>CSS</p>
                             </div>
                         </li>
+                        <li>
+                            <div class="icon-box">
+                                <img class="icon-pic" src="images/git.png">
+                                <p>Git</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -284,12 +287,23 @@
                 </div>
             </div>
             
-            <div class="footer" style="margin: 0px;">
+            <div class="footer sections" style="margin: 0px;">
                 <div class="footer-text">
                     <h1 style="font-weight: 600; font-family: monospace; margin: 0px;"> < /Portfolio   > </h1>
                 </div>
             </div>
+
+            <div class="sections" style="width: 100%;">
+                <div class="links">
+                <ul style="padding: 0px;margin: 0px;">
+                    <a href="https://github.com/asdhamidi" target="_blank"><img src="images/github.png"></a>  
+                    <a href="https://www.linkedin.com/in/asadullahhamidi/" target="_blank"><img src="images/linkedin.png"></a>  
+                    <a href="https://www.hackerrank.com/asdhamidi" target="_blank"><img src="images/hackerrank.svg"></a>  
+                    <a href="https://www.instagram.com/asad.codes" target="_blank"><img src="images/instagram.png"></a>
+                    <a href="https://www.asdhamidi.medium.com" target="_blank"><img src="images/medium.png"></a>
+                </ul>
+                </div>
+            </div>
         </div>
-        <p style="font-size: 15px; text-align: center; margin: 0px;">Made with ❤️.</p>
     </body>
 </html>
