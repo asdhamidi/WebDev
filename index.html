@@ -2,7 +2,7 @@
 <html id="top">
     <head>
         <title>Portfolio - Asadullah Hamidi</title>
-        <link rel="stylesheet" href="styles.css"
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <header>
@@ -13,40 +13,43 @@
                 <a href="#Projects"><h1>Projects</h1></a>
             </nav>
         </header>
-    
-    <div class="container">
-        <div class="landing">
-            <div class="landing-text">
-                <h1 style="font-weight: 600; font-family: monospace;">< Portfolio ></h1>
-                 <h1 style="font-weight: 200;">Hi, I'm Asad.</h1>
-                 <a href="#About"><img class="blink down"src="images/down.svg"></a>
-            </div>
-        </div>
         
-            <div class="sections" id="About">
-                <div class="subsections">   
-                    <h1 class="headings">Bio</h1>
-                    <div>
-                        <p>I'm a CS undergradute from India who loves problem solving, creating new things,
-                            & exploring technologies. 
-                            As of now, I'm exploring Web Development and really enjoying it.</p>
-                            <form method="get" action="assets/resume.pdf">
-                                <button type="submit">Résumé</button>
-                            </form>
+        <div class="container">
+            <div class="landing">
+                <div class="landing-text">
+                    <h1 style="font-weight: 600; font-family: monospace;">&lt;Portfolio&gt;</h1>
+                    <h1 style="font-weight: 200;">Hi, I'm Asad.</h1>
+                    <a href="#About"><img class="blink down"src="images/down.svg"></a>
+                </div>
+            </div>
+        
+            <div class="big-section" id="About">
+                <h1 class="headings">About</h1>
+                <div class="subsection">
+                    <div class="small-section">   
+                        <h1 style="font-weight: 400;">Hello!</h1>
+                        <div>
+                            <p>I'm a CS undergradute from India who loves problem solving, creating new things,
+                                & exploring technologies. 
+                                As of now, I'm exploring Web Development and really enjoying it.</p>
+                                <form method="get" action="assets/resume.pdf">
+                                    <button type="submit">Résumé</button>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                    <div class="subsections">
-                        <h1 class="headings">Academics</h1>
-                        <h2 style="font-weight: 400;"><b>B. Sc (Honours) Computer Science</b></h2>
-                    <h2 style="font-weight: 200;">Graphic Era (Deemed To Be University)</h2>
-                    <h3 style="margin: 0px;">2020-2023</h3>
+                        <div class="small-section">
+                            <h1 style="font-weight: 400;">Education</h1>
+                            <h2>B. Sc (Honours) Computer Science</h2>
+                            <h3>Graphic Era (Deemed To Be University)</h3>
+                            <h4>2020-2023</h4>
+                        </div>
                 </div>
             </div>
             
-            <div class="sections" id="Skills">
-                <div class="subsections" style="width: auto;">
-                    <h1 class="headings">Skills</h1>
-                    <ul style="display: flex; flex-wrap: wrap;">
+            <div class="big-section" id="Skills">
+                <h1 class="headings">Skills</h1>
+                <div class="subsection">
+                    <ul style="padding: 0px;">
                         <li>
                             <div class="icon-box">
                                 <img class="icon-pic" src="images/c.svg">
@@ -87,19 +90,54 @@
                 </div>
             </div>
             
-            <div class="sections" id="Projects">
-                <div class="subsections">
+            <div class="big-section" id="Projects">
                     <h1 class="headings">Projects</h1>
-                </div>
+                    <div class="subsection" style="flex-wrap: wrap;">
+                        <div class="project">
+                            <h2><b>6.0001</b></h2>
+                            <h3>Completed Introduction to Computer Science and Programming in Python by MITOCW. 
+                                Solved problem set of varying levels from beginner to medium.</h3>
+                            <ul class="tech">
+                                <li>Python</li>
+                            </ul>
+                            <a href="https://github.com/asdhamidi/6.0001"><img style="transform:scale(0.3);" class="icon-pic" src="images/github.png"></a>
+                        </div>
+                        <div class="project">
+                            <h2><b>6.0002</b></h2>
+                            <h3>Completed Introduction to Computational Thinking and Data Science by MITOCW. 
+                                Got an introduction to various Data Science topics like Monte Carlo, Clustering, KNN, ML, etc. 
+                                Solved various problem sets based on those.</h3>
+                            <ul class="tech">
+                                <li>Python</li>
+                                <li>Numpy</li>
+                                <li>Scipy</li>
+                                <li>Matplot</li>
+                                <li>Statistics</li>
+                            </ul>
+                            <a href="https://github.com/asdhamidi/6.0002"><img style="transform:scale(0.3);" src="images/github.png"></a>
+                        </div>
+                        <div class="project">
+                            <h2><b>DSA</b></h2>
+                            <h3>Did Data Structures and Algorithms in Python. Learnt and coded various Data Structures like Linked Lists, Heaps, Trees, Graphs, etc
+                                in C and Python.
+                            </h3>
+                            <ul class="tech">
+                                <li>Python</li>
+                                <li>C</li>
+                                <li>C++</li>
+                            </ul>
+                            <a href="https://github.com/asdhamidi/DSA"><img style="transform:scale(0.3);" class="icon-pic" src="images/github.png"></a>
+                        </div>
+                    </div>
             </div>
             
             <div class="footer" style="margin: 0px;">
                 <div class="footer-text">
-                    <h1 style="font-weight: 600; font-family: monospace; margin: 0px;"> < /Portfolio   > </h1>
+                    <h1> &lt;/Portfolio&gt; </h1>
                 </div>
             </div>
 
-            <div class="sections" style="width: 100%;">
+            <div class="subsection"   >
                 <div class="links">
                 <ul style="padding: 0px;margin: 0px;">
                     <a href="https://github.com/asdhamidi" target="_blank"><img src="images/github.png"></a>  
@@ -108,7 +146,7 @@
                     <a href="https://www.instagram.com/asad.codes" target="_blank"><img src="images/instagram.png"></a>
                     <a href="https://www.asdhamidi.medium.com" target="_blank"><img src="images/medium.png"></a>
                 </ul>
-                </div>
+            </div>
             </div>
         </div>
     </body>
