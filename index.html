@@ -2,7 +2,7 @@
 <html id="top">
     <head>
         <title>Portfolio - Asadullah Hamidi</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.css" id="theme-link">
     </head>
     <body>
         <header>
@@ -13,12 +13,12 @@
                 <a href="#Projects"><h1>Projects</h1></a>
             </nav>
         </header>
-        
+        <img src="images/night.svg" class="night" id="night-mode">
         <div class="container">
             <div class="landing">
                 <div class="landing-text">
-                    <h1 style="font-weight: 600; font-family: monospace;">&lt;Portfolio&gt;</h1>
-                    <h1 style="font-weight: 200;">Hi, I'm Asad.</h1>
+                    <h1>&lt;Portfolio&gt;</h1>
+                    <h2 style="font-weight: 200;">Hi, I'm Asad.</h2>
                     <a href="#About"><img class="blink down"src="images/down.svg"></a>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                         </li>
                         <li>
                             <div class="icon-box">
-                                <img class="icon-pic" src="images/python.png">
+                                <img class="icon-pic" src="images/python.svg">
                                 <p>Python</p>
                             </div>
                         </li>
@@ -82,7 +82,7 @@
                         </li>
                         <li>
                             <div class="icon-box">
-                                <img class="icon-pic" src="images/git.png">
+                                <img class="icon-pic" src="images/git.svg">
                                 <p>Git</p>
                             </div>
                         </li>
@@ -100,7 +100,7 @@
                             <ul class="tech">
                                 <li>Python</li>
                             </ul>
-                            <a href="https://github.com/asdhamidi/6.0001"><img style="transform:scale(0.3);" class="icon-pic" src="images/github.png"></a>
+                            <a href="https://github.com/asdhamidi/6.0001"><img class="icon-pic" src="images/github.svg"></a>
                         </div>
                         <div class="project">
                             <h2><b>6.0002</b></h2>
@@ -114,7 +114,7 @@
                                 <li>Matplot</li>
                                 <li>Statistics</li>
                             </ul>
-                            <a href="https://github.com/asdhamidi/6.0002"><img style="transform:scale(0.3);" src="images/github.png"></a>
+                            <a href="https://github.com/asdhamidi/6.0002"><img src="images/github.svg"></a>
                         </div>
                         <div class="project">
                             <h2><b>DSA</b></h2>
@@ -126,7 +126,7 @@
                                 <li>C</li>
                                 <li>C++</li>
                             </ul>
-                            <a href="https://github.com/asdhamidi/DSA"><img style="transform:scale(0.3);" class="icon-pic" src="images/github.png"></a>
+                            <a href="https://github.com/asdhamidi/DSA"><img class="icon-pic" src="images/github.svg"></a>
                         </div>
                     </div>
             </div>
@@ -140,14 +140,30 @@
             <div class="subsection"   >
                 <div class="links">
                 <ul style="padding: 0px;margin: 0px;">
-                    <a href="https://github.com/asdhamidi" target="_blank"><img src="images/github.png"></a>  
-                    <a href="https://www.linkedin.com/in/asadullahhamidi/" target="_blank"><img src="images/linkedin.png"></a>  
-                    <a href="https://www.hackerrank.com/asdhamidi" target="_blank"><img src="images/hackerrank.svg"></a>  
-                    <a href="https://www.instagram.com/asad.codes" target="_blank"><img src="images/instagram.png"></a>
-                    <a href="https://www.asdhamidi.medium.com" target="_blank"><img src="images/medium.png"></a>
+                    <a href="mailto:asad.hamidi119@gmail.com" target="_blank"><img src="images/mail.svg"></a>  
+                    <a href="https://github.com/asdhamidi" target="_blank"><img src="images/github.svg"></a>  
+                    <a href="https://www.linkedin.com/in/asadullahhamidi/" target="_blank"><img src="images/linkedin.svg"></a>  
+                    <a href="https://www.instagram.com/asad.codes" target="_blank"><img src="images/instagram.svg"></a>
+                    <a href="https://www.asdhamidi.medium.com" target="_blank"><img src="images/medium.svg"></a>
                 </ul>
             </div>
             </div>
         </div>
     </body>
+
+    <script>
+        const btn = document.querySelector(".night");
+        const theme = document.querySelector("#theme-link");
+        const btn_symbol = document.querySelector("#night-mode")
+        btn.addEventListener("click", function() {
+            // Swap out the URL for the different stylesheets
+            if (theme.getAttribute("href") == "styles.css") {
+                btn_symbol.src = "images/day.svg"
+                theme.href = "styles-dark.css";
+            } else {
+                btn_symbol.src = "images/night.svg"
+                theme.href = "styles.css";
+            }
+        });
+    </script>
 </html>
